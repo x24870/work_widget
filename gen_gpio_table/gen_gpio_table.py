@@ -40,11 +40,13 @@ def get_str(pin, io, status):
     #group_str = '/* GPIO Group {} */'
     ret_str = []
     if io == 'Input':
-         ret_str.append('set_gpio_dir_input({});'.format(pin))
+        ret_str.append('set_gpio_dir_input({});//Input'.format(pin))
+    elif io == 'Output O.D.':
+        ret_str.append('set_gpio_dir_input({});//Output O.D.'.format(pin))
     else:
-        ret_str.append('set_gpio_dir_output({});'.format(pin))
+        ret_str.append('set_gpio_dir_output({});//Output-PushPull'.format(pin))
         if status == 1:
-            ret_str.append('set_gpio_data_high({});'.format(pin))
+            ret_str.append('set_gpio_data_high({});//Output-PushPull'.format(pin))
         else:
             ret_str.append('set_gpio_data_low({});'.format(pin))
 
