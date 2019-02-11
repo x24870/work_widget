@@ -4,595 +4,596 @@
 <signature>$PMCP</signature>
 <version>0</version>
 <canvas>
-<canvaswidth>0x7d0</canvaswidth>
-<canvasheight>0x7d0</canvasheight>
-<grid>show</grid>
-<gridsize>0x32</gridsize>
+    <canvaswidth>0x7d0</canvaswidth>
+    <canvasheight>0x7d0</canvasheight>
+    <grid>show</grid>
+    <gridsize>0x32</gridsize>
 </canvas>
+
 <devcfg>
 <device>
-<dev_name>MC_CLCLN_AST2500</dev_name>
-<dev_class>PEGATRON DDF</dev_class>
-<name>MC_CLCLN_AST2500</name>
-<config>
-<variable>ADC0_M</variable>
-<value>54</value>
-</config>
-<config>
-<variable>ADC1_M</variable>
-<value>23</value>
-</config>
-<config>
-<variable>ADC2_M</variable>
-<value>15</value>
-</config>
-<config>
-<variable>ADC3_M</variable>
-<value>15</value>
-</config>
-<config>
-<variable>ADC4_M</variable>
-<value>6</value>
-</config>
-<config>
-<variable>ADC5_M</variable>
-<value>6</value>
-</config>
-<config>
-<variable>ADC6_M</variable>
-<value>14</value>
-</config>
-<config>
-<variable>ADC7_M</variable>
-<value>6</value>
-</config>
-<config>
-<variable>ADC8_M</variable>
-<value>6</value>
-</config>
-<config>
-<variable>ADC9_M</variable>
-<value>6</value>
-</config>
-<config>
-<variable>ADC10_M</variable>
-<value>12</value>
-</config>
-<config>
-<variable>ADC11_M</variable>
-<value>5</value>
-</config>
-<config>
-<variable>ADC12_M</variable>
-<value>5</value>
-</config>
-<config>
-<variable>ADC13_M</variable>
-<value>1</value>
-</config>
-<config>
-<variable>ADC14_M</variable>
-<value>5</value>
-</config>
-<config>
-<variable>ADC15_M</variable>
-<value>23</value>
-</config>
-<config>
-<variable>ADC0_R1</variable>
-<value>15800</value>
-</config>
-<config>
-<variable>ADC0_R2</variable>
-<value>2000</value>
-</config>
-<config>
-<variable>ADC1_R1</variable>
-<value>5360</value>
-</config>
-<config>
-<variable>ADC1_R2</variable>
-<value>2000</value>
-</config>
-<config>
-<variable>ADC2_R1</variable>
-<value>2870</value>
-</config>
-<config>
-<variable>ADC2_R2</variable>
-<value>2000</value>
-</config>
-<config>
-<variable>ADC3_R1</variable>
-<value>2870</value>
-</config>
-<config>
-<variable>ADC3_R2</variable>
-<value>2000</value>
-</config>
-<config>
-<variable>ADC4_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC4_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC5_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC5_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC6_R1</variable>
-<value>200000</value>
-</config>
-<config>
-<variable>ADC6_R2</variable>
-<value>100000</value>
-</config>
-<config>
-<variable>ADC7_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC7_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC8_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC8_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC9_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC9_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC10_R1</variable>
-<value>4700</value>
-</config>
-<config>
-<variable>ADC10_R2</variable>
-<value>5620</value>
-</config>
-<config>
-<variable>ADC11_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC11_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC12_R1</variable>
-<value>1000</value>
-</config>
-<config>
-<variable>ADC12_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC13_R1</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC13_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC14_R1</variable>
-<value>665</value>
-</config>
-<config>
-<variable>ADC14_R2</variable>
-<value>0</value>
-</config>
-<config>
-<variable>ADC15_R1</variable>
-<value>5360</value>
-</config>
-<config>
-<variable>ADC15_R2</variable>
-<value>2000</value>
-</config>
-<config>
-<variable>ADC0_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC1_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC2_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC3_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC4_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC5_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC6_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC7_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC8_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC9_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC10_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC11_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC12_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC13_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC14_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<config>
-<variable>ADC15_SensorValueMax</variable>
-<value>3300</value>
-</config>
-<pdk>
-</pdk>
-<device_glyph>
-<topleft_x>0x61</topleft_x>
-<topleft_y>0xfb</topleft_y>
-<width>0x69</width>
-<height>0x23b</height>
-<bus_glyph_S>
-<name>I2C_0</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0xfe</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_1</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x10e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_2</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x11e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_3</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x12e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_4</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x13e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_5</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x14e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_6</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x15e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_7</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x16e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_8</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x17e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_9</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x18e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_10</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x19e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_11</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x1ae</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_12</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x1be</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_13</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x1ce</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_14</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x1de</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_15</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x1ee</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_16</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x1fe</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_17</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x20e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<bus_glyph_S>
-<name>I2C_18</name>
-<style>0x1</style>
-<rbus>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x21e</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbus>
-</bus_glyph_S>
-<pin_glyph_S>
-<name>ADC_0</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x22e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_1</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x23e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_2</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x24e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_3</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x25e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_4</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x26e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_5</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x27e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_6</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x28e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_7</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x29e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_8</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x2ae</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_9</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x2be</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_10</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x2ce</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_11</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x2de</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_12</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x2ee</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_13</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x2fe</pt1_y>
-<pt2_fixed>false</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_14</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x30e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-<pin_glyph_S>
-<name>ADC_15</name>
-<style>0x1</style>
-<rbinder>
-<pt1_x>0xd4</pt1_x>
-<pt1_y>0x31e</pt1_y>
-<pt2_fixed>true</pt2_fixed>
-</rbinder>
-</pin_glyph_S>
-</device_glyph>
+    <dev_name>MC_CLCLN_AST2500</dev_name>
+    <dev_class>PEGATRON DDF</dev_class>
+    <name>MC_CLCLN_AST2500</name>
+    <config>
+    <variable>ADC0_M</variable>
+    <value>54</value>
+    </config>
+    <config>
+    <variable>ADC1_M</variable>
+    <value>23</value>
+    </config>
+    <config>
+    <variable>ADC2_M</variable>
+    <value>15</value>
+    </config>
+    <config>
+    <variable>ADC3_M</variable>
+    <value>15</value>
+    </config>
+    <config>
+    <variable>ADC4_M</variable>
+    <value>6</value>
+    </config>
+    <config>
+    <variable>ADC5_M</variable>
+    <value>6</value>
+    </config>
+    <config>
+    <variable>ADC6_M</variable>
+    <value>14</value>
+    </config>
+    <config>
+    <variable>ADC7_M</variable>
+    <value>6</value>
+    </config>
+    <config>
+    <variable>ADC8_M</variable>
+    <value>6</value>
+    </config>
+    <config>
+    <variable>ADC9_M</variable>
+    <value>6</value>
+    </config>
+    <config>
+    <variable>ADC10_M</variable>
+    <value>12</value>
+    </config>
+    <config>
+    <variable>ADC11_M</variable>
+    <value>5</value>
+    </config>
+    <config>
+    <variable>ADC12_M</variable>
+    <value>5</value>
+    </config>
+    <config>
+    <variable>ADC13_M</variable>
+    <value>1</value>
+    </config>
+    <config>
+    <variable>ADC14_M</variable>
+    <value>5</value>
+    </config>
+    <config>
+    <variable>ADC15_M</variable>
+    <value>23</value>
+    </config>
+    <config>
+    <variable>ADC0_R1</variable>
+    <value>15800</value>
+    </config>
+    <config>
+    <variable>ADC0_R2</variable>
+    <value>2000</value>
+    </config>
+    <config>
+    <variable>ADC1_R1</variable>
+    <value>5360</value>
+    </config>
+    <config>
+    <variable>ADC1_R2</variable>
+    <value>2000</value>
+    </config>
+    <config>
+    <variable>ADC2_R1</variable>
+    <value>2870</value>
+    </config>
+    <config>
+    <variable>ADC2_R2</variable>
+    <value>2000</value>
+    </config>
+    <config>
+    <variable>ADC3_R1</variable>
+    <value>2870</value>
+    </config>
+    <config>
+    <variable>ADC3_R2</variable>
+    <value>2000</value>
+    </config>
+    <config>
+    <variable>ADC4_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC4_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC5_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC5_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC6_R1</variable>
+    <value>200000</value>
+    </config>
+    <config>
+    <variable>ADC6_R2</variable>
+    <value>100000</value>
+    </config>
+    <config>
+    <variable>ADC7_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC7_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC8_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC8_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC9_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC9_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC10_R1</variable>
+    <value>4700</value>
+    </config>
+    <config>
+    <variable>ADC10_R2</variable>
+    <value>5620</value>
+    </config>
+    <config>
+    <variable>ADC11_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC11_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC12_R1</variable>
+    <value>1000</value>
+    </config>
+    <config>
+    <variable>ADC12_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC13_R1</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC13_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC14_R1</variable>
+    <value>665</value>
+    </config>
+    <config>
+    <variable>ADC14_R2</variable>
+    <value>0</value>
+    </config>
+    <config>
+    <variable>ADC15_R1</variable>
+    <value>5360</value>
+    </config>
+    <config>
+    <variable>ADC15_R2</variable>
+    <value>2000</value>
+    </config>
+    <config>
+    <variable>ADC0_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC1_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC2_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC3_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC4_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC5_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC6_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC7_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC8_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC9_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC10_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC11_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC12_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC13_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC14_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <config>
+    <variable>ADC15_SensorValueMax</variable>
+    <value>3300</value>
+    </config>
+    <pdk>
+    </pdk>
+    <device_glyph>
+    <topleft_x>0x61</topleft_x>
+    <topleft_y>0xfb</topleft_y>
+    <width>0x69</width>
+    <height>0x23b</height>
+    <bus_glyph_S>
+    <name>I2C_0</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0xfe</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_1</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x10e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_2</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x11e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_3</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x12e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_4</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x13e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_5</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x14e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_6</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x15e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_7</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x16e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_8</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x17e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_9</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x18e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_10</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x19e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_11</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x1ae</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_12</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x1be</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_13</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x1ce</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_14</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x1de</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_15</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x1ee</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_16</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x1fe</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_17</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x20e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <bus_glyph_S>
+    <name>I2C_18</name>
+    <style>0x1</style>
+    <rbus>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x21e</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbus>
+    </bus_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_0</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x22e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_1</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x23e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_2</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x24e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_3</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x25e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_4</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x26e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_5</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x27e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_6</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x28e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_7</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x29e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_8</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x2ae</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_9</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x2be</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_10</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x2ce</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_11</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x2de</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_12</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x2ee</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_13</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x2fe</pt1_y>
+    <pt2_fixed>false</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_14</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x30e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    <pin_glyph_S>
+    <name>ADC_15</name>
+    <style>0x1</style>
+    <rbinder>
+    <pt1_x>0xd4</pt1_x>
+    <pt1_y>0x31e</pt1_y>
+    <pt2_fixed>true</pt2_fixed>
+    </rbinder>
+    </pin_glyph_S>
+    </device_glyph>
 </device>
 <device_connection>
 <name>MC_CLCLN_AST2500</name>
@@ -5550,6 +5551,7 @@
 <item>U48</item>
 </sdrorder>
 </devcfg>
+
 <module>
 <title>AMI Configuration</title>
 <section>
@@ -5569,6 +5571,7 @@
 <titleorder>
 </titleorder>
 </module>
+
 <module>
 <title>Bond Cfg</title>
 <section>
