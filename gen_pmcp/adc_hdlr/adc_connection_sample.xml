@@ -1,0 +1,8 @@
+<device_connection>
+    <name>5V_SENSE</name>
+    <pin_x>
+    <name>VOLT</name>
+    <attached_device>MC_CLCLN_AST2500</attached_device>
+    <attached_pin>ADC_1</attached_pin>
+    </pin_x>
+</device_connection>

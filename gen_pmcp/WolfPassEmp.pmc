@@ -1064,12 +1064,12 @@
 </device>
 
 <device_connection>
-    <name>5V_SENSE</name>
-    <pin_x>
-    <name>VOLT</name>
-    <attached_device>MC_CLCLN_AST2500</attached_device>
-    <attached_pin>ADC_1</attached_pin>
-    </pin_x>
+<name>5V_SENSE</name>
+<pin_x>
+<name>VOLT</name>
+<attached_device>MC_CLCLN_AST2500</attached_device>
+<attached_pin>ADC_1</attached_pin>
+</pin_x>
 </device_connection>
 
 <device>
@@ -5557,27 +5557,6 @@
 </device_connection>
 
 <sdrorder>
-<item>12V_SENSE</item>
-<item>5V_SENSE</item>
-<item>3.3V_SENSE</item>
-<item>3.3V_DUAL_SENSE</item>
-<item>1.2V_DUAL_SENSE</item>
-<item>1.15V_DUAL_SEN</item>
-<item>VBAT_SENSE</item>
-<item>VCORE_SENSE</item>
-<item>1.15V_VCCGT_SEN</item>
-<item>1.2V_VDDQ_SENSE</item>
-<item>2.5V_VPP_SENSE</item>
-<item>1V_VCCIO_SENSE</item>
-<item>1.05V_VCCSA_SEN</item>
-<item>1.05V_PCH_SENSE</item>
-<item>5V_DUAL_SENSE</item>
-<item>BR24G02</item>
-<item>M24C02</item>
-<item>U45</item>
-<item>U103</item>
-<item>U46</item>
-<item>U48</item>
 </sdrorder>
 </devcfg>
 
