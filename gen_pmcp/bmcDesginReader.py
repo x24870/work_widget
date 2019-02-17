@@ -53,5 +53,5 @@ class sheetReader():
         
 
 if __name__ == "__main__":
-    reader = bmcDesignReader()
+    reader = sheetReader()
     reader.read_bmc_design_sheet('BMC_design.xlsx')
