@@ -3,6 +3,7 @@ import openpyxl
 class sheetReader():
     def __init__ (self):
         self.adc_par = {}
+        self.sdr_list = {}
 
     def read_bmc_design_sheet(self, filename):
         wb = None
@@ -13,6 +14,7 @@ class sheetReader():
 
         if wb:
             self._get_adc_par(wb)
+            self._read_SDR_list(wb)
 
         return
 
@@ -23,6 +25,7 @@ class sheetReader():
             return
         sheet = wb.get_sheet_by_name(sheet_name)
 
+        #TODO add ADC channel
         start_row = 2
         sensor_name_col = 'A'
         lowNR_col = 'F'
@@ -51,6 +54,27 @@ class sheetReader():
 
                 #print(self.adc_par[sensor_name])
         
+    def _read_SDR_list(self, wb):
+        sheet_name = 'SDRList'
+        if sheet_name not in wb.get_sheet_names():
+            print("Can't find SDRList page")
+            return
+        sheet = wb.get_sheet_by_name(sheet_name)
+
+        start_row = 2
+        sensor_num_col = 'A'
+        sensor_name_col = 'B'
+
+        for i in range(start_row, 58):
+            sensor_name = sheet[sensor_name_col + str(i)].value
+            if sensor_name:
+                dict_ = self.sdr_list[sensor_name] = {}
+                dict_['sensor_num'] = sheet[sensor_num_col + str(i)].value
+
+
+
+
+
 
 if __name__ == "__main__":
     reader = sheetReader()

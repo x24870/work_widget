@@ -7,6 +7,7 @@ class PMCP_Parser():
     def __init__(self):
         self.tree = None
         self.root = None
+        self.adc_handler = adc_handler.adc_hdlr(os.path.join(os.getcwd(), 'adc_hdlr'))
 
     def read_pmc(self, filename):
         self.tree = ET.parse(filename)
