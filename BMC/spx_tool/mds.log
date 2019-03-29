@@ -1,0 +1,4 @@
+2019-03-29 18:46:52,917 
+ERROR [main] (com.ami.megarac.logger.MDSLogger) (?:?) - 
+There is no handler to execute for command org.eclipse.ui.file.refresh
+
