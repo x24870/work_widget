@@ -8,7 +8,14 @@ else:
 
 def release(HPMfolder_path):
     #make sure git is clean
-    en = raw_input("Please Make sure your git repository in clean(y/n)")
+    en = raw_input('''
+    Please check following items:
+    1. Make sure your git repository is clean
+    2. Update FW version in PRJ file
+    3. Copy rom.ima to CreateHPM folder
+    
+    I finished all items above (y/n):
+    ''')
     if en.upper() != 'Y':
         print("Exit release process")
         exit()
