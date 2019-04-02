@@ -1,4 +1,4 @@
-import os, subprocess, datetime, sys
+import os, subprocess, datetime, sys, glob
 
 if 'linux' in subprocess.check_output(['uname']).lower():
     call_py = 'python'
@@ -45,13 +45,13 @@ class Releaser():
         print('SHA256: {}'.format(self.SHA256))
 
         #edit ReleasNode
-        #self.edit_releaseNode()
+        self.edit_releaseNode()
 
         #git commit
-        #self.git_commit()
+        self.git_commit()
 
         #git add tag
-        #self.git_add_tag()
+        self.git_add_tag()
 
         #finish
         print('Finish!\nNow you can edit ReleaseNode and push to remote Git')
@@ -61,7 +61,8 @@ class Releaser():
         subprocess.call([call_py, 'patch_prj.py'])
 
         #clean config/patch
-        subprocess.call(['rm', os.path.join('..', 'configs', 'patch', '*')])
+        for f in glob.glob(os.path.join('..', 'configs', 'patch', '*')):
+            os.remove(f)
 
         #replate origin .PRJ file to patched .PRJ file
         subprocess.call(['mv', patch_PRJ, PRJ])
@@ -92,13 +93,24 @@ class Releaser():
         return major, minor, aux
 
     def edit_releaseNode(self):
-        #edit release node
+        if len(self.FW_ver['major']) == 1:
+            self.FW_ver['major'] = '0' + self.FW_ver['major']
+        if len(self.FW_ver['minor']) == 1:
+            self.FW_ver['minor'] = '0' + self.FW_ver['minor']
+        if len(self.FW_ver['aux']) == 1:
+            self.FW_ver['aux'] = '0' + self.FW_ver['aux']
         filename = os.path.join('..', 'ReleaseNode')
         with open(filename, 'a') as f:
             f.write('==========================================================================\n')
-            f.write('Version number: ')
-            f.write('Release Date: ' + datetime.datetime.now().strftime('%Y-%m-%d') + '\n')
-            f.write('SHA256 checksum:\n' + str(gen_SHA256('rom.ima')))
+            f.write('Version number: {}.{}.{}\n'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
+            f.write('Release Date: {}\n'.format(datetime.datetime.now().strftime('%Y-%m-%d')))
+            f.write('SHA256 checksum: {}\n'.format(self.SHA256))
+            f.write('''Note:
+
+Add feature list:
+
+Fix bug:
+''')
 
     def edit_HPM_conf(self, HPMfolder_path):
         #TODO: use correct conf filename
@@ -118,17 +130,16 @@ class Releaser():
         return subprocess.check_output(['sha256sum', filepath], shell=True)
 
     def git_commit(self):
-        #TODO: make sure git proccess is correct
         subprocess.call(['git', 'add', os.path.join('..', 'configs')])
+        subprocess.call(['git', 'add', os.path.join('..', 'ReleaseNode')])
         subprocess.call(['git', 'commit', '-m', 
         '"Release Firmware version: {}.{}.{}"'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'])])
 
     def git_add_tag(self):
-        #TODO:verify if this command is correct
         subprocess.call([
             'git', 
             'tag',
-            'Release ver:{}.{}.{}'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']),
+            'Release_ver_{}.{}.{}'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']),
             'HEAD'
             ])
 
