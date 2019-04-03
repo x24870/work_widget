@@ -23,10 +23,7 @@ Fix bug:
     6. KCS funtion is not workable
     7. After BMC cold reset, the bmc network can not reconnect.
 
-==========================================================================
-Release Date: 2019-03-29
-SHA256 checksum:
-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 *rom.ima
+Project name: CLCL_N
 ==========================================================================
 Version number: 01.08.00
 Release Date: 2019-04-03
