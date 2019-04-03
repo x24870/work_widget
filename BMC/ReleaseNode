@@ -61,3 +61,77 @@ Fix bug:
     7. After BMC cold reset, the bmc network can not reconnect.
 
 
+Project name: CLCL_N
+==========================================================================
+Release Date: 2019-04-03
+Version number: 01.08.1			#PATCH_SELECTED
+SHA256 checksum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./rom.ima
+
+Note:
+
+Add feature list:
+
+Fix bug:
+
+==========================================================================
+Release date: 2019.03.22
+Version number: 1.08
+SHA256 checksum:
+cfa198a3aca35d02afd46fd0a9d8a459b529f8e5ddbbd0a2cf1dcff0efd74e60  rom.ima
+
+Note:
+    1. BMC not send BMC_ONCTRL to CPLD, because PCH not send signal to BMC 
+
+Add feature list:
+    1. Enable LAN and DRAM test tool in uboot. 
+    2. Add Raiser Card Temp(U1) to SDR list.
+    3. Update CPLD FW by IPMI command.
+    4. Change web logo to Pegatron logo.
+
+Fix bug:
+    1. U103 Sensor show critical.
+    2. U45 Sensor show critical.
+    3. U46 Sensor show critical.
+    4. U48 Sensor show critical.
+    5. BMC Firmware Update Function via MegaRAC-SPX is not workable.
+    6. KCS funtion is not workable
+    7. After BMC cold reset, the bmc network can not reconnect.
+
+
+Project name: CLCL_N
+==========================================================================
+Release Date: 2019-04-03
+Version number: 01.08.00
+SHA256 checksum: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  ./rom.ima
+
+Note:
+
+Add feature list:
+
+Fix bug:
+
+==========================================================================
+Release date: 2019.03.22
+Version number: 1.08
+SHA256 checksum:
+cfa198a3aca35d02afd46fd0a9d8a459b529f8e5ddbbd0a2cf1dcff0efd74e60  rom.ima
+
+Note:
+    1. BMC not send BMC_ONCTRL to CPLD, because PCH not send signal to BMC 
+
+Add feature list:
+    1. Enable LAN and DRAM test tool in uboot. 
+    2. Add Raiser Card Temp(U1) to SDR list.
+    3. Update CPLD FW by IPMI command.
+    4. Change web logo to Pegatron logo.
+
+Fix bug:
+    1. U103 Sensor show critical.
+    2. U45 Sensor show critical.
+    3. U46 Sensor show critical.
+    4. U48 Sensor show critical.
+    5. BMC Firmware Update Function via MegaRAC-SPX is not workable.
+    6. KCS funtion is not workable
+    7. After BMC cold reset, the bmc network can not reconnect.
+
+
