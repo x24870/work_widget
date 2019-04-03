@@ -23,6 +23,7 @@ Fix bug:
     6. KCS funtion is not workable
     7. After BMC cold reset, the bmc network can not reconnect.
 
+
 Project name: CLCL_N
 ==========================================================================
 Release Date: 2019-04-03
@@ -34,6 +35,7 @@ Note:
 Add feature list:
 
 Fix bug:
+
 ==========================================================================
 Release date: 2019.03.22
 Version number: 1.08
@@ -57,4 +59,5 @@ Fix bug:
     5. BMC Firmware Update Function via MegaRAC-SPX is not workable.
     6. KCS funtion is not workable
     7. After BMC cold reset, the bmc network can not reconnect.
+
 
