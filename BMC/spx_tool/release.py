@@ -28,7 +28,7 @@ class Releaser():
         patch_PRJ, PRJ = self.get_PRJ_name()
 
         #clean PRJ patch
-        #self.clear_PRJ_patch(patch_PRJ, PRJ)
+        self.clear_PRJ_patch(patch_PRJ, PRJ)
 
         #Get FW version
         self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'] = self.get_cur_FW_ver(PRJ)
