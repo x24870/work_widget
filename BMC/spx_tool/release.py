@@ -34,10 +34,10 @@ class Releaser():
         self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'] = self.get_cur_FW_ver(PRJ)
         print("\nFW version: ${}$.${}$.${}$".format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
 
-        #edit .conf for create HPM
+        #TODO: edit .conf for create HPM
         #self.edit_HPM_conf(HPMfolder_path)
 
-        #create HPM
+        #TODO: create HPM
         #self.create_HPM()
 
         #generate SHA256 code
@@ -84,6 +84,7 @@ class Releaser():
         major, minor, aux = '', '', ''
         with open(PRJ_path, 'r') as f:
             for line in f.readlines():
+                #TODO: use regex is better solution
                 if 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Major' in line:
                     major = line.split('=')[1].replace('"', '').replace('\n', '').replace(' ', '').replace('\t', '')
                     major = major.split('#')[0]#prevent patch_prj.py tag
