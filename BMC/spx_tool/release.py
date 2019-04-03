@@ -143,7 +143,7 @@ Fix bug:\n\n''')
         return subprocess.check_output(['sha256sum', filepath])
 
     def git_commit(self):
-        subprocess.call(['git', 'add', os.path.join('..', 'configs')])
+        subprocess.call(['git', 'rm', os.path.join('..', 'configs', 'patch', '*')])
         subprocess.call(['git', 'add', os.path.join('..', 'ReleaseNode')])
         subprocess.call(['git', 'commit', '-m', 
         '"Release Firmware version: {}.{}.{}"'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'])])
