@@ -86,10 +86,13 @@ class Releaser():
             for line in f.readlines():
                 if 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Major' in line:
                     major = line.split('=')[1].replace('"', '').replace('\n', '')
+                    major = major.split('#').[0]#prevent patch_prj.py tag
                 elif 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Minor' in line:
                     minor = line.split('=')[1].replace('"', '').replace('\n', '')
+                    minor = minor.split('#').[0]#prevent patch_prj.py tag
                 elif 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Aux' in line:
                     aux = line.split('=')[1].replace('"', '').replace('\n', '')
+                    aux = aux.split('#').[0]#prevent patch_prj.py tag
         return major, minor, aux
 
     def edit_releaseNode(self):
