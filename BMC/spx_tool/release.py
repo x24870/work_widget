@@ -32,7 +32,7 @@ class Releaser():
 
         #Get FW version
         self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'] = self.get_cur_FW_ver(PRJ)
-        print("\nFW version: {}.{}.{}".format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
+        print("\nFW version: ${}$.${}$.${}$".format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
 
         #edit .conf for create HPM
         #self.edit_HPM_conf(HPMfolder_path)
@@ -85,16 +85,13 @@ class Releaser():
         with open(PRJ_path, 'r') as f:
             for line in f.readlines():
                 if 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Major' in line:
-                    line = line.strip()
-                    major = line.split('=')[1].replace('"', '').replace('\n', '')
+                    major = line.split('=')[1].replace('"', '').replace('\n', '').replace(' ', '').replace('\t', '')
                     major = major.split('#')[0]#prevent patch_prj.py tag
                 elif 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Minor' in line:
-                    line = line.strip()
-                    minor = line.split('=')[1].replace('"', '').replace('\n', '')
+                    minor = line.split('=')[1].replace('"', '').replace('\n', '').replace(' ', '').replace('\t', '')
                     minor = minor.split('#')[0]#prevent patch_prj.py tag
                 elif 'CONFIG_SPX_MAP_WOLFPASS_ATTR_Aux' in line:
-                    line = line.strip()
-                    aux = line.split('=')[1].replace('"', '').replace('\n', '')
+                    aux = line.split('=')[1].replace('"', '').replace('\n', '').replace(' ', '').replace('\t', '')
                     aux = aux.split('#')[0]#prevent patch_prj.py tag
         return major, minor, aux
 
