@@ -100,17 +100,29 @@ class Releaser():
         if len(self.FW_ver['aux']) == 1:
             self.FW_ver['aux'] = '0' + self.FW_ver['aux']
         filename = os.path.join('..', 'ReleaseNode')
+
+        ori_node = None
+        with open(filename, 'r') as f:
+            ori_node = f.readlines()
+
         with open(filename, 'a') as f:
+            #firset line
+            f.write(ori_node[0])
+
+            #new releasNode content
             f.write('==========================================================================\n')
-            f.write('Version number: {}.{}.{}\n'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
             f.write('Release Date: {}\n'.format(datetime.datetime.now().strftime('%Y-%m-%d')))
+            f.write('Version number: {}.{}.{}\n'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
             f.write('SHA256 checksum: {}\n'.format(self.SHA256))
             f.write('''Note:
 
 Add feature list:
 
-Fix bug:
-''')
+Fix bug:\n\n''')
+
+            #old releaseNode content
+            for line in ori_node[1:]:
+                f.write(line)
 
     def edit_HPM_conf(self, HPMfolder_path):
         #TODO: use correct conf filename
@@ -127,7 +139,8 @@ Fix bug:
 
     def gen_SHA256(self, filepath):
         #generate SHA256
-        return subprocess.check_output(['sha256sum', filepath], shell=True)
+        print(filepath)
+        return subprocess.check_output(['sha256sum', filepath])
 
     def git_commit(self):
         subprocess.call(['git', 'add', os.path.join('..', 'configs')])
