@@ -1,5 +1,7 @@
 import os, subprocess, datetime, sys, glob
 
+REQUIRE_FILES = set(['private.pem', 'rom.ima', 'signimage.conf', 'CreateHPMImage'])
+
 if 'linux' in subprocess.check_output(['uname']).lower():
     call_py = 'python'
 else:
@@ -23,6 +25,9 @@ class Releaser():
         if en.upper() != 'Y':
             print("Exit release process")
             exit()
+
+        #check if required files in specified folder
+        self.check_required_files(HPMfolder_path)
 
         #get PRJ name
         patch_PRJ, PRJ = self.get_PRJ_name()
@@ -163,7 +168,12 @@ Known issue:\n\n''')
             'HEAD'
             ])
 
-    #push to git
+    def check_required_files(self, path):
+        files_in_folder = set(os.listdir(path))
+        if REQUIRE_FILES & files_in_folder != REQUIRE_FILES:
+            lacked_files = REQUIRE_FILES - files_in_folder
+            print("Error: Can't find following files: {}".format(', '.join(lacked_files)))
+            exit()
 
 if __name__ == '__main__':
     if len(sys.argv) < 2:
@@ -173,8 +183,6 @@ if __name__ == '__main__':
         ''')
     elif not os.path.isdir(sys.argv[1]):
         print('Error: Invalud path')
-    elif 'private.pem' not in os.listdir(sys.argv[1]) or 'rom.ima' not in os.listdir(sys.argv[1]):
-        print("Error: Can't find 'private.pem' or 'rom.ima' in provided folder path")
     else:
         rlsr = Releaser()
         rlsr.release(sys.argv[1])
