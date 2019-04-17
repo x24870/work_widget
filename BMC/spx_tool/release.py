@@ -32,7 +32,7 @@ class Releaser():
 
         #Get FW version
         self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'] = self.get_cur_FW_ver(PRJ)
-        print("\nFW version: ${}$.${}$.${}$".format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
+        print("\nFW version: {}.{}.{}".format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
 
         #TODO: edit .conf for create HPM
         #self.edit_HPM_conf(HPMfolder_path)
@@ -41,7 +41,7 @@ class Releaser():
         #self.create_HPM()
 
         #generate SHA256 code
-        self.SHA256 = self.gen_SHA256(os.path.join(HPMfolder_path, 'rom.ima'))#TODO: make sure returned string is specified
+        self.SHA256 = self.gen_SHA256(os.path.join(HPMfolder_path, 'rom.ima'))
         print('SHA256: {}'.format(self.SHA256))
 
         #edit ReleasNode
@@ -144,7 +144,9 @@ Known issue:\n\n''')
     def gen_SHA256(self, filepath):
         #generate SHA256
         print(filepath)
-        return subprocess.check_output(['sha256sum', filepath])
+        sha256_str = subprocess.check_output(['sha256sum', filepath])
+        sha256_str = ' '.join(sha256_str.split()[:-1]) + '    rom.ima\n'
+        return sha256_str
 
     def git_commit(self, PRJ):
         subprocess.call(['git', 'rm', os.path.join('..', 'configs', 'patch', '*')])
