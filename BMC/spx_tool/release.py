@@ -48,10 +48,10 @@ class Releaser():
         self.edit_releaseNode()
 
         #git commit
-        self.git_commit()
+        #self.git_commit(PRJ)
 
         #git add tag
-        self.git_add_tag()
+        #self.git_add_tag()
 
         #finish
         print('Finish!\nNow you can edit ReleaseNode and push to remote Git')
@@ -65,7 +65,7 @@ class Releaser():
             os.remove(f)
 
         #replate origin .PRJ file to patched .PRJ file
-        subprocess.call(['mv', patch_PRJ, PRJ])
+        subprocess.call(['cp', patch_PRJ, PRJ])
 
     def get_PRJ_name(self):
         PRJ = ''
@@ -109,7 +109,7 @@ class Releaser():
         with open(filename, 'r') as f:
             ori_node = f.readlines()
 
-        with open(filename, 'a') as f:
+        with open(filename, 'w') as f:
             #firset line
             f.write(ori_node[0])
 
@@ -118,11 +118,11 @@ class Releaser():
             f.write('Release Date: {}\n'.format(datetime.datetime.now().strftime('%Y-%m-%d')))
             f.write('Version number: {}.{}.{}\n'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
             f.write('SHA256 checksum: {}\n'.format(self.SHA256))
-            f.write('''Note:
+            f.write('''Add feature list:
 
-Add feature list:
+Fix bug:
 
-Fix bug:\n\n''')
+Known issue:\n\n''')
 
             #old releaseNode content
             for line in ori_node[1:]:
@@ -146,9 +146,10 @@ Fix bug:\n\n''')
         print(filepath)
         return subprocess.check_output(['sha256sum', filepath])
 
-    def git_commit(self):
+    def git_commit(self, PRJ):
         subprocess.call(['git', 'rm', os.path.join('..', 'configs', 'patch', '*')])
         subprocess.call(['git', 'add', os.path.join('..', 'ReleaseNode')])
+        subprocess.call(['git', 'add', os.path.join('..', 'configs', PRJ)])
         subprocess.call(['git', 'commit', '-m', 
         '"Release Firmware version: {}.{}.{}"'.format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'])])
 
