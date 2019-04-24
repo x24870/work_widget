@@ -11,6 +11,7 @@ class Releaser():
     def __init__(self):
         self.FW_ver = {'major': None, 'minor': None, 'aux': None}
         self.SHA256 = ''
+        self.PRJName = ''
 
     def release(self, HPMfolder_path):
         #Check list
@@ -31,19 +32,23 @@ class Releaser():
 
         #get PRJ name
         patch_PRJ, PRJ = self.get_PRJ_name()
+        self.PRJName = os.path.basename(PRJ)
+        self.PRJName = self.PRJName.replace('_64.PRJ', '')
+        self.PRJName = self.PRJName.replace('.PRJ', '')
+        print(self.PRJName)
 
         #clean PRJ patch
-        self.clear_PRJ_patch(patch_PRJ, PRJ)
+        #self.clear_PRJ_patch(patch_PRJ, PRJ)
 
         #Get FW version
         self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'] = self.get_cur_FW_ver(PRJ)
         print("\nFW version: {}.{}.{}".format(self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux']))
 
-        #TODO: edit .conf for create HPM
-        #self.edit_HPM_conf(HPMfolder_path)
+        #edit signimage.conf
+        self.edit_HPM_conf(HPMfolder_path)
 
-        #TODO: create HPM
-        #self.create_HPM()
+        #excute CreateHPMImage
+        self.create_HPM(HPMfolder_path)
 
         #generate SHA256 code
         self.SHA256 = self.gen_SHA256(os.path.join(HPMfolder_path, 'rom.ima'))
@@ -134,17 +139,38 @@ Known issue:\n\n''')
                 f.write(line)
 
     def edit_HPM_conf(self, HPMfolder_path):
-        #TODO: use correct conf filename
-        HPMconf = 'signedImage.conf'
+        HPMconf = 'signimage.conf'
         if HPMconf not in os.listdir(HPMfolder_path):
             print("Error: Can't find '{}' in '{}'".format(HPMconf, HPMfolder_path))
+            exit()
 
-        with open(HPMconf, 'w') as f:
-            #TODO: edit HPMconf
-            pass
+        new_context = []
+        with open(os.path.join(HPMfolder_path, HPMconf), 'r') as f:
+            for line in f.readlines():
+                if line.strip().startswith('HPMImage'):
+                    str1 = line.split('=')[0]
+                    str2 = ('= ' + './' + self.PRJName + '_BMC_' + self.FW_ver['major'] + '_' + self.FW_ver['minor'] + '_' + 
+                    datetime.datetime.now().strftime('%Y%m%d') + '.hpm' + '          ; Path & Filename of final output HPM Image\n')
+                    line = str1 + str2
+                elif line.strip().startswith('FwVersionMajor'):
+                    str1 = line.split('=')[0]
+                    str2 = '= ' + '0x' + self.FW_ver['major'] + "                              ; 1B This component's Major Version\n"
+                    line = str1 + str2
+                elif line.strip().startswith('FwVersionMinor'):
+                    str1 = line.split('=')[0]
+                    str2 = '= ' + '0x' + self.FW_ver['minor'] + "                              ; 1B This component's Major Version\n"
+                    line = str1 + str2
+                new_context.append(line)
+
+        with open(os.path.join(HPMfolder_path, HPMconf), 'w') as f:
+            for line in new_context:
+                f.write(line)
+
                    
-    def create_HPM(self):
-        subprocess.call(['./CreateHPMImage', 'create', 'signedHPM.conf'])#TODO: use correct file name
+    def create_HPM(self, HPMfolder_path):
+        excute_file = os.path.join(HPMfolder_path, './CreateHPMImage')
+        conf_file = os.path.join(HPMfolder_path, 'signimage.conf')
+        subprocess.call([excute_file, 'create', conf_file])
 
     def gen_SHA256(self, filepath):
         #generate SHA256
