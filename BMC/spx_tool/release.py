@@ -2,7 +2,7 @@ import os, subprocess, datetime, sys, glob
 
 REQUIRE_FILES = set(['private.pem', 'rom.ima', 'signimage.conf', 'CreateHPMImage'])
 
-if 'linux' in subprocess.check_output(['uname']).lower():
+if 'linux' in subprocess.check_output(['uname']).decode('utf-8').lower():
     call_py = 'python'
 else:
     call_py = 'python2'
@@ -23,6 +23,7 @@ class Releaser():
         
         I finished all items above (y/n):
         ''')
+
         if en.upper() != 'Y':
             print("Exit release process")
             exit()
