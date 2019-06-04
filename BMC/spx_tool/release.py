@@ -39,7 +39,7 @@ class Releaser():
         print(self.PRJName)
 
         #clean PRJ patch
-        #self.clear_PRJ_patch(patch_PRJ, PRJ)
+        self.clear_PRJ_patch(patch_PRJ, PRJ)
 
         #Get FW version
         self.FW_ver['major'], self.FW_ver['minor'], self.FW_ver['aux'] = self.get_cur_FW_ver(PRJ)
@@ -74,6 +74,9 @@ class Releaser():
         #clean config/patch
         for f in glob.glob(os.path.join('..', 'configs', 'patch', '*')):
             os.remove(f)
+
+        #add a empty file for keep this folder
+        subprocess.call(['touch', os.path.join('..', 'configs', 'patch', 'keep.folder')])
 
         #replate origin .PRJ file to patched .PRJ file
         subprocess.call(['cp', patch_PRJ, PRJ])
